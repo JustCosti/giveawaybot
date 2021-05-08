@@ -1,2 +1,8 @@
 discord
 asyncio
+random
+logging
+json
+os
+string
+colorama
