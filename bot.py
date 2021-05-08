@@ -109,8 +109,8 @@ async def giveaway(ctx):
     logembed = discord.Embed(title = "Giveaway Logged" , description = f"**Prize:** ``{msg4.content}``\n**Winners:** ``{winerscount}``\n**Channel:** {giveawaychannel.mention}\n**Host:** {ctx.author.mention}" , color = discord.Color.red())
     logembed.set_thumbnail(url = ctx.author.avatar_url)
     
-    guild = client.get_guild(601461177217974303) # Put your guild ID here!
-    logchannel = guild.get_channel(802198929151885363) # Put your channel, you would like to send giveaway logs to.
+    guild = client.get_guild() # Put your guild ID here!
+    logchannel = guild.get_channel() # Put your channel, you would like to send giveaway logs to.
     await logchannel.send(embed = logembed)
 
     futuredate = datetime.utcnow() + timedelta(seconds=timewait)
